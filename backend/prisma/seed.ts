@@ -5,17 +5,23 @@ const prisma = new PrismaClient()
 async function main() {
   console.log("🌱 Feeling-up in progress...");
 
-  const skillsData = [
+  /// skills list
+const skillsData = [
     { name: 'Anglais', category: 'Language', icon: 'anglais.svg' },
     { name: 'Francais', category: 'Language', icon: 'Francais.svg' },
-    { name: 'Langage C', category: 'Language', icon: 'c.svg' },
-    { name: 'Langage C++', category: 'Language', icon: 'cpp.svg' },
-    { name: 'TypeScript', category: 'Language', icon: 'ts.svg' },
+    { name: 'Language C', category: 'Language', icon: 'c.svg' },
+    { name: 'Language C++', category: 'Language', icon: 'cpp.svg' },
     { name: 'TypeScript', category: 'Language', icon: 'ts.svg' },
     { name: 'React', category: 'Language', icon: 'react.svg' },
+    { name: 'Prisma', category: 'Language', icon: 'prisma.svg' },
+    { name: 'Node JS', category: 'Language', icon: 'nodejs.svg' },
     { name: 'Docker', category: 'Language', icon: 'docker.svg' },
     { name: 'Programmation', category: 'Hard Skill', icon: 'prog.svg' },
+    { name: 'Frontend', category: 'Hard Skill', icon: 'frontend.svg' },
+    { name: 'Backend', category: 'Hard Skill', icon: 'backend.svg' },
+    { name: 'Fullstack', category: 'Hard Skill', icon: 'fullstack.svg' },
     { name: 'Marketing', category: 'Hard Skill', icon: 'market.svg' },
+    { name: 'Database', category: 'Hard Skill', icon: 'Database.svg' },
     { name: 'Esprit d\'équipe', category: 'Soft Skill', icon: 'team.svg' },
     { name: 'Communication', category: 'Soft Skill', icon: 'comm.svg' },
     { name: 'Empathie', category: 'Soft Skill', icon: 'empat.svg' },
@@ -32,20 +38,39 @@ async function main() {
   }
 
   // Project list
+const projectsData = [
+	{
+		name: 'Ft_Printf',
+		description: 'Recodage complet de la célèbre fonction printf en C.',
+		github: 'https://github.com/dsatge/ft_printf.git',
+		skills : ['Language C', 'Programmation']
+	},
+	{
+		name: 'Portfolio',
+		description: 'Création d\'un site internet vitrine de tous les projets et notions apprises. Ce site est destinée \
+		a mieux prendre en main les outils de gestion d\'un projet backend et frontend mais également la gestion d\'une \
+		base de donnée via prisma.',
+		github: 'https://github.com/dsatge/Portfolio.git',
+		skills : ['TypeScript', 'Prisma', 'Node JS', 'React', 'Frontend', 'Backend', 'Database', 'Docker' , 'Fullstack', 'Programmation']
+	},
+]
+
   console.log("📁 Insertion of projects...");
-  
-  await prisma.project.upsert({
-    where: { name: 'Ft_Printf' },
-    update: {},
-    create: {
-      name: 'Ft_Printf',
-      description: 'Recodage complet de printf.',
-      github: 'https://github.com/dsatge/printf',
-      skills: {
-        connect: { name: 'Langage C' } 
-      }
-    },
-  });
+for (const p of projectsData) {
+	await prisma.project.upsert({
+		where: { name: p.name },
+		update: {},
+		create: {
+		  name: p.name,
+		  description: p.description,
+		  github: p.github,
+		  skills: {
+			connect: p.skills.map(skillName => ({name: skillName}))
+		  }
+		},
+	  });
+
+}
 
   console.log("✅ Database ready !");
 }
