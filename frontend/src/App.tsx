@@ -7,10 +7,11 @@ const CARD_STYLE = [
 	{card: "bg-pop-lighter text-pop-red border-pop-red/20 rounded-xl shadow-lg border border-white/10",}
 ]
 
-function SkillCard({ skill, style}: {skill: any, style: any})
+function SkillCard({ skill, style, onClick}: {skill: any, style: any, onClick: () => void})
 {
 	return (
 		<div 
+			onClick={onClick}
 			className={`relative group p-6 hover:scale-[1.02] hover:shadow-2xl ${style.card}`}>
 			<span className="absolute top-3 right-10 text-[10] uppercase tracking-widest opacity-0 group-hover:opacity-50 transition-opacity">
 				Cliquer
@@ -23,9 +24,32 @@ function SkillCard({ skill, style}: {skill: any, style: any})
 	)
 }
 
-function App() {
-  const [skills, setSkills] = useState([])
+function DisplayCard({ skill, onClose }: { skill: any, onClose: () => void})
+{
+	return (
+		<div
+			className="fixed inset-0 justify-center"
+			onClick={onClose}
+			>
+			<div
+				onClick={(e) => e.stopPropagation()}
+				>
+				<button
+					onClick={onClose}
+					className="absolute top-4 right-4"
+				>
+				</button>
+				<h1 className="text-4xl font-black text-white mt-4 mb-2">
+        	 	 {skill.name}
+				 </h1>
+			</div>
+		</div>
+	)
+}
 
+function App() {
+  const [skills, setSkills] = useState([]);
+  const [selectedSkill, setSelectedSkill] = useState<any>(null);
   useEffect(() => {
 	fetch('http://localhost:5001/api/skills')
 		.then(res => res.json())
@@ -53,12 +77,19 @@ function App() {
 								<SkillCard
 									skill={skill}
 									style={currentStyle}
+									onClick={() => setSelectedSkill(skill)}
 								/>
 						</li>
 					);
 					})}
 				</ul>
 			</main>
+			{selectedSkill && (
+				<DisplayCard
+					skill={selectedSkill}
+					onClose={() => setSelectedSkill(null)}
+				/>
+			)}
         </div>
 	)
 }
