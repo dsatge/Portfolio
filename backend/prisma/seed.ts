@@ -53,6 +53,22 @@ const projectsData = [
 		github: 'https://github.com/dsatge/Portfolio.git',
 		skills : ['TypeScript', 'Prisma', 'Node JS', 'React', 'Frontend', 'Backend', 'Database', 'Docker' , 'Fullstack', 'Programmation']
 	},
+	{
+		name: 'Minishell',
+		description: 'Recodage d\'un terminal de type shell. Pour cela il a fallut comprendre le fonctionnement et le \
+		comportement de bash pour pouvoir enssuite le recréer. Le tout sous forme de travail de groupe.',
+		github: 'https://github.com/dsatge/mini_shell.git',
+		skills : ['Language C', 'Esprit d\'équipe', 'Programmation']
+	},
+	{
+		name: 'Ft_IRC',
+		description: 'Creation d\'un chat relais internet (Internet Relay Chat : IRC). L\'idée est de créer un serveur \
+		sur lequel des personnes peuvent s\'échanger des messages directs via leurs pseudo ou bien communiquer via des \
+		channels. Le tout avec un service de moderation et de restriction pour les channels mais également des messages \
+		informatifs pour les utilisateurs pour savoir qui est connecté ou bien qui a quitté le serveur.',
+		github: 'https://github.com/dsatge/Ft_IRC.git',
+		skills : ['Language C++', 'Esprit d\'équipe', 'Programmation']
+	},
 ]
 
   console.log("📁 Insertion of projects...");
