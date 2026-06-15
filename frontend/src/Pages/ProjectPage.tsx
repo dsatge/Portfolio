@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react'
 import { Header } from '../Components/Header'
+import { Footer } from '../Components/Footer'
 import { DisplayCard } from '../Components/DisplayCard'
 import { ProjectCard } from '../Components/ProjectCard'
 
 const CARD_STYLE = [
 	{card: "bg-light-grey-blue text-dominant-shadow-blue border-pop-lighter/40 rounded-xl shadow-lg border border-white/10",},
+	{card: "bg-pop-red text-pop-lighter border-white/10 rounded-xl shadow-lg border border-white/10",},
 	{card: "bg-dominant-shadow-blue text-light-grey border-pop-red/20 rounded-xl shadow-lg border border-white/10",},
 	{card: "bg-pop-lighter text-pop-red border-pop-red/20 rounded-xl shadow-lg border border-white/10",},
 	{card: "bg-pop-red text-pop-lighter border-white/10 rounded-xl shadow-lg border border-white/10",},
+	{card: "bg-dominant-shadow-blue text-light-grey border-pop-red/20 rounded-xl shadow-lg border border-white/10",},
 ]
 
-export function ProjectPage ({onNavigate}: {onNavigate: () => void})
+export function ProjectPage ({onNavigate}: {onNavigate: (page: "projects" | "skills" | "contact") => void})
 {
 	const [projects, setProjects] = useState([]);
 	const [selectedProjects, setSelectedProjects] = useState<any>(null);
@@ -50,13 +53,13 @@ export function ProjectPage ({onNavigate}: {onNavigate: () => void})
 	});
 
 	return (
-		<div className="min-h-screen bg-dominant-white text-pop-red p-8 font-fraunces">
+		<div className="min-h-screen bg-dominant-white text-pop-red p-8 font-fraunces flex flex-col">
 			<Header />
-			<main>
+			<main className='flex-grow'>
 				<h2 className='text-xl mb-6 font-semibold'>Mes projets :</h2>
 				{/*Buton to Skill page*/}
 				<button 
-					onClick= {onNavigate}
+					onClick= {() => onNavigate("skills")}
 					className='cursor-pointer rounded-xl border mb-8 p-2 hover:bg-pop-red hover:text-pop-lighter'
 				>
 					Voir mes Skills ➔
@@ -115,12 +118,13 @@ export function ProjectPage ({onNavigate}: {onNavigate: () => void})
 					})}
 				</ul>
 			</main>
+			<Footer onNavigate={onNavigate}/>
 			{selectedProjects && (
 				<DisplayCard
 					Project={selectedProjects}
 					onClose={() => setSelectedProjects(null)}
 				/>
 			)}
-        </div>
+		</div>
 	)
 }

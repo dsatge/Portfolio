@@ -9,10 +9,11 @@ export function DisplayCard({ Project, onClose }: { Project: any, onClose: () =>
 {
 	return (
 		<div
-			className="fixed inset-0 justify-center backdrop-blur-xs items-center justify-center p-4"
+			className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 flex items-center justify-center p-0 md:p-8 lg:p-16"
 			onClick={onClose}
 			>
 			<div
+				className="w-full max-w-7xl h-full relative animate-fade-in rounded-2xl"
 				onClick={(e) => e.stopPropagation()}
 				>
 				<button
@@ -48,8 +49,10 @@ export function DisplayCard({ Project, onClose }: { Project: any, onClose: () =>
 							</span>
 						  );
 						})}
-					</div>					<h2 className='text-me text-pop-lighter pl-10 pr-10 pt-10'>
-						Description :<br></br>
+					</div>					
+						<h2 className='text-me text-pop-lighter'>Description :<br></br></h2>
+						<div className="space-y-3 max-h-[250px] overflow-y-auto m-2 pr-2 text-pop-lighter">
+
 						{Project.description} <br></br><br></br>
 						<a href={Project.github}>
 							<div className='bg-light-grey rounded-xl pt-5 pb-5 pr-5 pl-5 text-dominant-shadow-blue hover:bg-white'>
@@ -60,7 +63,8 @@ export function DisplayCard({ Project, onClose }: { Project: any, onClose: () =>
 							</svg>
 							</div>
 						</a>
-					</h2>
+						</div>
+					
 				</div>
 			</div>
 		</div>
