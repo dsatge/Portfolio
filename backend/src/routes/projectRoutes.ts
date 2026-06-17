@@ -14,9 +14,13 @@ routerProject.get('/', async (req, res) => {
         
         res.json(projects);
     }
-    catch (error) {
-        res.status(500).json({ error: "Error while gathering projects" });
-    }
+    // catch (error) {
+    //     res.status(500).json({ error: "Error while gathering projects" });
+    // }
+	catch (error) {
+    console.error("❌ ERREUR PRISMA CRITICAL :", error);
+    res.status(500).json({ error: "Error while gathering projects" });
+}
 });
 
 export default routerProject;
