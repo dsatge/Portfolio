@@ -20,6 +20,6 @@ app.use('/api/projects', routerProject);
 
 
 // Server launch
-app.listen(PORT, () => {
-  console.log(`Link to server : http://localhost:${PORT}`);
+app.listen(Number(PORT), '0.0.0.0', () => {
+    console.log(`Server is running on port ${PORT}`);
 });
