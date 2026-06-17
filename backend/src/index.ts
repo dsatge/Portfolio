@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import prisma from './lib/prisma.js';
 import routerSkill from './routes/skillRoutes.js';
+import routerProject from './routes/projectRoutes.js';
 
 // Init
 dotenv.config(); // chaerge .env
@@ -15,38 +16,8 @@ app.use(express.json()); // To read json
 
 // --- ROUTES ---
 app.use('/api/skills', routerSkill);
+app.use('/api/projects', routerProject);
 
-app.get('/api/projects', async (req, res) => {
-	try {
-        const projects = await prisma.project.findMany({
-            include: {
-                skills: true
-            }
-        });
-        
-        res.json(projects);
-    }
-    catch (error) {
-        console.error("❌ Erreur Prisma :", error);
-        res.status(500).json({ error: "Error while gathering projects" });
-    }
-});
-
-app.get('/api/skills', async (req, res) => {
-	try {
-        const skills = await prisma.skill.findMany({
-            include: {
-                ProjectSkills: true
-            }
-        });
-        
-        res.json(skills);
-    }
-    catch (error) {
-        console.error("❌ Erreur Prisma :", error);
-        res.status(500).json({ error: "Error while gathering skills" });
-    }
-});
 
 // Server launch
 app.listen(PORT, () => {

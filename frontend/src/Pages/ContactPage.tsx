@@ -7,25 +7,14 @@ export function ContactPage ({onNavigate}: {onNavigate: (page: "projects" | "ski
 			<Header />
 			<main>
 				<div className='bg-pop-red text-pop-lighter'>
-					<p className='flex justify-center p-4 md:p-8 lg:p-12 md:text-xl lg:text-4xl'>
-						⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠀<br/>
-						⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⠀<br/>
-						⣿⣿⣿⣿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⠀<br/>
-						⣿⣿⣿⣿⡟⢀⣾⣿⣷⡖⠒⣀⣀⣤⣶⣾⣿⣷⣶⣤⣤⣴⣾⣆⠘⣿⣿⣿⠀<br/>
-						⣿⣿⣿⡿⠁⣾⣿⣿⣿⣧⣀⠙⠛⠛⠛⠋⣈⠻⢿⣿⣿⣿⣿⣿⣧⠈⢿⣿⠀<br/>
-						⣿⣿⣿⠁⣼⣿⠟⠻⠿⣿⣿⣿⣷⣶⣾⣿⠿⣷⣄⡉⠻⣿⣿⣿⣿⣧⠈⢿⠀<br/>
-						⠛⠛⠃⠀⠻⠋⣠⣶⠄⠙⠛⢻⣿⣿⣿⣷⣦⣈⠛⢿⣦⣄⠙⠻⠛⠁⠀⠀⠀<br/>
-						⠀⠀⠀⠀⢠⣾⠟⠁⣠⣿⠇⠈⠛⣿⣿⣈⠙⠿⣷⣦⡈⠛⠛⠀⠀⠀⠀⠀⠀<br/>
-						⠀⠀⠀⠀⠀⠁⢠⣾⡿⠁⣠⣾⠆⠸⠉⠻⣷⣤⡈⠙⠿⠃⠀⠀⠀⠀⠀⠀⠀<br/>
-						⠀⠀⠀⠀⠀⠀⠀⠉⠀⣾⠟⢁⣴⡶⠀⣤⡀⠙⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
-						⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⣿⠟⠁⠀⠛⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br/>
+					<p className='flex justify-center p-1 md:p-2 lg:p-1 md:text-xl lg:text-4xl'>
 					</p>
 				</div>
-				<div className='p-4 uppercase text-md md:text-md lg:text-xl flex justify-center'>
-					<h1>Mes infos pour me contacter</h1>
+				<div className='p-4 text-md md:text-md lg:text-xl flex justify-center'>
+					<h1>Je suis Déborah Satge, si mon profil vous intéresse n'hésitez a me contacter.</h1>
 				</div>
-				<div className="px-4 md:px-10 lg:px-120 bg-light-grey-blue p-2 md:p-4 lg:p-6 border border-dominant-shadow-blue rounded-lg">
-					<h1 className='b-8 text-lg font-bold'>Contact</h1>
+				<div className="px-4 md:px-10 lg:px-120 bg-pop-lighter p-2 md:p-4 lg:p-6  rounded-lg">
+					<h1 className='b-8 text-lg font-bold'>Mes infos</h1>
 					<p>
 						Email : deborah.satge@yahoo.fr<br/>
 						Téléphone : 06.34.46.70.77<br/>

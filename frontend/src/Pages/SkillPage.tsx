@@ -5,7 +5,7 @@ import { SkillCard } from '../Components/SkillCard';
 import { DisplaySkillCard } from '../Components/DisplaySkillCard'
 
 const CARD_STYLE = [
-	{card: "bg-light-grey-blue text-dominant-shadow-blue border-pop-lighter/40 rounded-xl shadow-lg border border-white/10",},
+	{card: "bg-pop-lighter text-pop-red border-pop-red/20 rounded-xl shadow-lg border border-white/10",},
 	{card: "bg-pop-red text-pop-lighter border-white/10 rounded-xl shadow-lg border border-white/10",},
 	{card: "bg-dominant-shadow-blue text-light-grey border-pop-red/20 rounded-xl shadow-lg border border-white/10",},
 	{card: "bg-pop-lighter text-pop-red border-pop-red/20 rounded-xl shadow-lg border border-white/10",},
