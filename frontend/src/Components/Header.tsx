@@ -12,7 +12,7 @@ export function Header ()
 			</div>
 
 			<button>
-				<a href="../public/Cv_2026_DeborahSatge.pdf"
+				<a href="/Cv_2026_DeborahSatge.pdf"
 							target="_blank"
 							rel="noopener noreferrer">
 					<span className="absolute top-1 mt-5 mr-1 lg:mr-15 right-3 text-md lg:text-xl cursor-pointer">

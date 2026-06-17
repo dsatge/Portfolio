@@ -43,7 +43,7 @@ export function ContactPage ({onNavigate}: {onNavigate: (page: "projects" | "ski
 					</li>
 					<li>
 						<a 
-							href="../public/Cv_2026_DeborahSatge.pdf"
+							href="/Cv_2026_DeborahSatge.pdf"
 							target="_blank"
 							rel="noopener noreferrer">
 							<button 

@@ -13,7 +13,7 @@ export function Footer ({onNavigate}: {onNavigate: (page: "projects" | "skills" 
 						Me contacter ➔
 					</button>			
 				</li>
-				<li><a href="../public/Cv_2026_DeborahSatge.pdf"
+				<li><a href="/Cv_2026_DeborahSatge.pdf"
 						target="_blank"
 						rel="noopener noreferrer">
 					<button 
