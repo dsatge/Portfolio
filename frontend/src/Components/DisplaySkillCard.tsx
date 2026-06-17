@@ -35,8 +35,8 @@ export function DisplaySkillCard({ Skill, onClose }: { Skill: any, onClose: () =
 
 					<h2 className='text-sm md:text-me lg:text-lg text-pop-lighter pt-10'>
 						Projets comportant cette compétence :<br></br>
-						{Skill.ProjectSkills && Skill.ProjectSkills.length > 0 ? (							Skill.ProjectSkills.map((project: any) => (
-							<a href={project.github}>
+						{Skill.ProjectSkills && Skill.ProjectSkills.length > 0 ? (Skill.ProjectSkills.map((project: any) => (
+							<a href={project.github as keyof typeof String}>
 								<div 
 									onClick={() => setSelectedSkills(project)}
 									className={`relative group bg-light-grey rounded-xl text-dominant-shadow-blue hover:bg-white text-sm md:text-me lg:text-lg hover:shadow-2xl h-full min-h[200px] justify-between`}>

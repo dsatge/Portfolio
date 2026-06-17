@@ -13,9 +13,23 @@ const CARD_STYLE = [
 	{card: "bg-dominant-shadow-blue text-light-grey border-pop-red/20 rounded-xl shadow-lg border border-white/10",},
 ]
 
+interface Skill {
+	id: number;
+	name: string;
+	type: string;
+}
+
+interface Project {
+	id: number;
+	name: string;
+	description: string;
+	github?: string;
+	skills: Skill[];
+}
+
 export function ProjectPage ({onNavigate}: {onNavigate: (page: "projects" | "skills" | "contact") => void})
 {
-	const [projects, setProjects] = useState([]);
+	const [projects, setProjects] = useState<Project[]>([]);
 	const [selectedProjects, setSelectedProjects] = useState<any>(null);
 	const [activeFilters, setActiveFilters] = useState<number[]>([]);
 
@@ -48,7 +62,7 @@ export function ProjectPage ({onNavigate}: {onNavigate: (page: "projects" | "ski
 	const filteredProjects = projects.filter((project) => {
 		if (activeFilters.length === 0) return true;
 		return activeFilters.every(filterId =>
-			project.skills?.some((skill: any) => skill.id === filterId)
+			project.skills.some((skill: any) => skill.id === filterId)
 		);
 	});
 

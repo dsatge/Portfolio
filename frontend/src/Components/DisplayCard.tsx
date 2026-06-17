@@ -1,3 +1,4 @@
+
 const TAG_STYLE = {
 	Language: "bg-pop-lighter text-pop-red border-pop-red/20",
 	'Hard Skill': "bg-dominant-shadow-blue text-light-grey border-slate-300",
@@ -37,7 +38,7 @@ export function DisplayCard({ Project, onClose }: { Project: any, onClose: () =>
 					<div className="flex flex-wrap gap-2 mb-6">
 						<h2 className='text-pop-lighter'>Compétences :</h2>
 						{Project.skills && Project.skills.map((skill: any) => {
-						  const badgeColorClass = TAG_STYLE[skill.category] || TAG_STYLE["default"];
+						  const badgeColorClass = skill?.category as keyof typeof TAG_STYLE || TAG_STYLE["default"];
 						  return (
 							<span 
 								key={skill.id} 
