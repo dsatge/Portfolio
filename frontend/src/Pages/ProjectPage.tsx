@@ -20,7 +20,7 @@ export function ProjectPage ({onNavigate}: {onNavigate: (page: "projects" | "ski
 	const [activeFilters, setActiveFilters] = useState<number[]>([]);
 
 	useEffect(() => {
-	fetch('http://localhost:5001/api/projects')
+	fetch('https://portfolio-backend-ui8s.onrender.com/api/projects')
 		.then(res => res.json())
 		.then(data => {
 			console.log("Data received :", data);
