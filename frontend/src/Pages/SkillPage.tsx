@@ -64,9 +64,9 @@ export function SkillPage ({onNavigate}: {onNavigate: (page : "projects" | "skil
 				{/*Buton to Project page*/}
 				<button 
 					onClick={() => onNavigate("projects")}
-					className='cursor-pointer rounded-xl border mb-8 p-2 hover:bg-pop-red hover:text-pop-lighter'
+					className='cursor-pointer rounded-xl bg-pop-lighter border mb-8 p-2 hover:bg-pop-red hover:text-pop-lighter'
 				>
-					Voir mes Projets ➔
+					<span className='text-md'>Voir par Projets ➔</span>
 				</button>
 				{/*Tags - filters*/}
 				<h1>Filtrer par compétences techniques :</h1>

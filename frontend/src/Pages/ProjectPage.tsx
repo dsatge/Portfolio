@@ -74,9 +74,9 @@ export function ProjectPage ({onNavigate}: {onNavigate: (page: "projects" | "ski
 				{/*Buton to Skill page*/}
 				<button 
 					onClick= {() => onNavigate("skills")}
-					className='cursor-pointer rounded-xl border mb-8 p-2 hover:bg-pop-red hover:text-pop-lighter'
+					className='cursor-pointer bg-pop-lighter rounded-xl border mb-8 p-2 hover:bg-pop-red hover:text-pop-lighter'
 				>
-					Voir mes Skills ➔
+					<span className='text-md'>Voir par Compétences ➔</span>
 
 				</button>
 				{/*Tags - filters*/}
