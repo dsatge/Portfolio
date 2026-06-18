@@ -11,7 +11,15 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middlewares
-app.use(cors()); // To connect front to backend, check security
+app.use(cors({
+ origin: [
+	'http://localhost:5173',// Local env
+	'https://deborah-satge.onrender.com',
+	'https://deborahsatge.fr',
+	'https://www.deborahsatge.fr'
+  ],
+	credentials: true
+})); // To connect front to backend, check security
 app.use(express.json()); // To read json
 
 // --- ROUTES ---
