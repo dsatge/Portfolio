@@ -2,7 +2,7 @@
 export function Footer ({onNavigate}: {onNavigate: (page: "projects" | "skills" | "contact") => void})
 {
 	return (
-		<footer>
+		<footer className="fixed bottom-0 left-0 w-full p-2 bg-dominant-white">
 			<br></br>
 			<ul className="flex justify-between items-center w-full px-4 md:px-10 lg:px-120">
 				<li>

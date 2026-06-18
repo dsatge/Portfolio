@@ -3,11 +3,11 @@ export function Header ()
 	return (
 		<header>
 			<div className="lg:col-span-2 space-y-4">
-				<h1 className="text-4xl md:text-5xl lg:text-6xl tracking-tight">
-					Mon Portfolio 
+				<h1 className="text-3xl md:text-4xl lg:text-5xl tracking-tight">
+					Déborah Satge 
 				</h1>
 				<h2 className="text-xl md:text-3xl lg:text-4xl">
-					 — À la recherche d'un stage stimulant
+					<span className="font-bold">Mon Portolio</span> <br/> — À la recherche d'un stage dans le <span className="font-bold">domaine informatique</span>
 				</h2>
 			</div>
 
@@ -28,12 +28,13 @@ export function Header ()
 					{/* Presentation */}
 					<div className="lg:col-span-2 space-y-4">
 						<p className="text-dominant-shadow-blue md:text-lg leading-normal ">
-							Après un parcours enrichissant dans le commerce et une expatriation de 3 ans en 
+							Après une expérience de 3 ans dans le commerce international en 
 							Australie, j'ai choisi de me réorienter vers le développement informatique, un 
-							univers concret qui me passionne. Aujourd'hui en fin de formation à 
-							42, j'ai conçu ce portfolio pour vous présenter mes compétences et mes 
+							univers plus concret qui me passionne. Aujourd'hui en fin de formation à 
+							l'école 42, j'ai conçu ce portfolio pour vous présenter mes compétences et mes 
 							réalisations. <br/>
-							Rigoureuse, bilingue et dotée d'un fort esprit d'équipe, je recherche un stage pour mettre mon énergie et ma technique au service de vos projets.
+							Rigoureuse, curieuse et dotée d'un fort esprit d'équipe, je recherche un stage 
+							pour mettre mon énergie et ma technique au service de vos projets.
 						</p>
 					</div>
 
