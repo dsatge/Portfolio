@@ -59,7 +59,7 @@ export function SkillPage ({onNavigate}: {onNavigate: (page : "projects" | "skil
 		<div className = 'min-h-screen bg-dominant-white text-pop-red p-8 font-fraunces flex flex-col'>
 
 			< Header />
-			<main className='flex-grow'>
+			<main className='flex-grow min-h-screen pb-1'>
 				<h2 className='text-xl mb-6 font-semibold'>Mes compétences :</h2>
 				{/*Buton to Project page*/}
 				<button 
