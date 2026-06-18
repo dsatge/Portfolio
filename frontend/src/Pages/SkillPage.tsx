@@ -27,7 +27,7 @@ export function SkillPage ({onNavigate}: {onNavigate: (page : "projects" | "skil
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   useEffect(() => {
-	fetch('https://portfolio-backend-ui8s.onrender.com/api/skills')
+	fetch(`${import.meta.env.VITE_API_URL}/api/skills`)
 		.then(res => res.json())
 		.then(data => {
 			console.log("Data received :", data);

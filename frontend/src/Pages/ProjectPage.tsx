@@ -34,7 +34,7 @@ export function ProjectPage ({onNavigate}: {onNavigate: (page: "projects" | "ski
 	const [activeFilters, setActiveFilters] = useState<number[]>([]);
 
 	useEffect(() => {
-	fetch('https://portfolio-backend-ui8s.onrender.com/api/projects')
+	fetch(`${import.meta.env.VITE_API_URL}/api/projects`)
 		.then(res => res.json())
 		.then(data => {
 			console.log("Data received :", data);
