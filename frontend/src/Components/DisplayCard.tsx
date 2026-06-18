@@ -55,7 +55,9 @@ export function DisplayCard({ Project, onClose }: { Project: any, onClose: () =>
 						<div className="space-y-3 max-h-[250px] overflow-y-auto m-2 pr-2 text-pop-lighter">
 
 						{Project.description} <br></br><br></br>
-						<a href={Project.github}>
+						<a href={Project.github}
+							target="_blank"
+							rel="noopener noreferrer">
 							<div className='bg-light-grey rounded-xl pt-5 pb-5 pr-5 pl-5 text-dominant-shadow-blue hover:bg-white'>
 
 							Lien Github :
