@@ -69,7 +69,7 @@ export function ProjectPage ({onNavigate}: {onNavigate: (page: "projects" | "ski
 	return (
 		<div className="min-h-screen bg-dominant-white text-pop-red p-8 font-fraunces flex flex-col">
 			<Header />
-			<main className='flex-grow min-h-screen'>
+			<main className='flex-grow min-h-screen pb-20'>
 				<h2 className='text-xl mb-6 font-semibold'>Mes projets :</h2>
 				{/*Buton to Skill page*/}
 				<button 

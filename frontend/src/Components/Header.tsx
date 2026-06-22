@@ -44,11 +44,14 @@ export function Header ()
 							Guide de navigation
 						</h2>
 						<p className="text-sm text-slate-600 leading-normal">
-							Ce site est une application web interactive connectée à ma base de données.
+							Ce site est une application web interactive connectée à ma base de données. 
 						</p>
 						<ul className="text-xs text-dominant-shadow-blue text-slate-500 space-y-2 list-disc list-inside">
-							<li><span className="font-bold text-slate-700">Projets :</span> Utilisez les filtres dynamiques pour trier mes codes par technologie.</li>
-							<li><span className="font-bold text-slate-700">Compétences :</span> Cliquez sur une carte pour voir sa fiche et les projets associés.</li>
+							<li><span className="font-bold text-slate-700">Projets :</span> Utilisez les filtres dynamiques pour trier mes codes par technologie. 
+							les filtres sont cumulatifs et présentent uniquement les projets qui comportent l'intégralité des filtres. Cliquez sur le nom d'un 
+							projet pour voir plus d'infos dessus.</li>
+							<li><span className="font-bold text-slate-700">Compétences :</span> Utilisez les filtres afin de trier les compétences par languages, 
+							Hard Skill et/ou Soft Skill. Cliquez sur une carte pour voir sa fiche et les projets associés.</li>
 						</ul>
 					</div>
 				</div>
